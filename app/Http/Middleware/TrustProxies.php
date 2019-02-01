@@ -5,8 +5,8 @@ namespace App\Http\Middleware;
 use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;
 
-class TrustProxies extends Middleware
-{
+class TrustProxies extends Middleware {
+
     /**
      * The trusted proxies for this application.
      *
@@ -20,7 +20,7 @@ class TrustProxies extends Middleware
      * @var int
      */
 
-    //protected $headers = Request::HEADER_X_FORWARDED_ALL;
+    protected $headers = Request::HEADER_X_FORWARDED_ALL;
 
-      protected $headers = Request::HEADER_x_FORWARDED_AWS_ELB;
+    //      protected $headers = Request::HEADER_x_FORWARDED_AWS_ELB;
 }
