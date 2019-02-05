@@ -13,6 +13,13 @@
  *
  */
 
+/* Live: https://ethereal-personal.herokuapp.com/ */
+
+Route::get('/test',
+    function () {
+        return view('test');
+    });
+
 Route::get('/', 'PagesController@home');
 Route::resource('projects', 'ProjectsController');
 Route::get('/about', 'PagesController@about');

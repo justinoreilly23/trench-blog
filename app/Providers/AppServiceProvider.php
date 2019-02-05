@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Http\Controllers\Helper;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
@@ -14,10 +13,7 @@ class AppServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        view()->composer('layout',
-            function ($view) {
-                $view->with('title', Helper::getTitle());
-            });
+        //
     }
 
     /**

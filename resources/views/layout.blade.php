@@ -18,7 +18,8 @@
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous" >
 
-  <title >Ethereal</title >
+
+  @include('partials.title')
 
 </head >
 <body >
@@ -27,16 +28,18 @@
 
 <div class="content center" >
 
+
   <div class="header-tape rotate-left" >
     <h1 >
-      {{ $title }}
+      @include('partials.section_header')
     </h1 >
   </div >
 
-  <div class="center content-body" >
+  <div class="center content-body m-auto" >
     @hasSection('content')
       @yield('content')
-    @else <h1 class="text-center" > Placeholder </h1 >
+    @else
+      <h3 class="text-center m-auto w-50 text-muted" >Nothing to see here...</h3 >
     @endif
   </div >
 
@@ -45,6 +48,9 @@
 </div >
 
 @include('partials.footer')
+
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9" ></script >
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
