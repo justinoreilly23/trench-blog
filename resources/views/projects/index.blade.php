@@ -5,25 +5,31 @@
 @endsection
 
 @section('content')
-  <ul >
+  <div >
     @foreach ($projects as $project)
-      <li class="project" >
-        <a href="/projects/{{ $project->id }}/edit" >
+      <a href="/projects/{{ $project->id }}/edit" >
+        <div class="project" >
           <h2 class="card-title" >{{ $project->title }}</h2 >
           <p class="card-desc" >{{ $project->description }}</p >
-        </a >
-      </li >
+        </div >
+      </a >
     @endforeach
-  </ul >
+  </div >
 
-  <div >
-    <a href="/projects/create" >
-      @if (isset($project))
-        <i class="fas fa-2x fa-plus-circle icon mb-2 i-light" ></i >
+  <div class="columns" >
+    <a href="/projects/create" class="column" >
+      @if(count($projects) > 0)
+        <div >
+          <i class="fas fa-2x fa-plus-circle icon btn" ></i >
+        </div >
       @else
-        <button class="button-yellow" >Create a new project</button >
+        <div class="column" >
+          <h4 >
+            <button class="bg-translucent btn" >New Project</button >
+          </h4 >
+        </div >
       @endif
     </a >
   </div >
-@endsection
 
+@endsection

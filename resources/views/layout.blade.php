@@ -6,16 +6,13 @@
   <meta charset="utf-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
 
-  <!-- My CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}" >
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}" >
 
   <!-- Font Awesome -->
   <link rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous" >
 
 
@@ -27,27 +24,22 @@
 @include('partials.header')
 
 <div class="content center" >
-
-
   <div class="header-tape rotate-left" >
     <h1 >
       @include('partials.section_header')
     </h1 >
   </div >
-
   <div class="center content-body m-auto" >
     @hasSection('content')
       @yield('content')
     @else
       <h3 class="text-center m-auto w-50 text-muted" >Nothing to see here...</h3 >
     @endif
+    @include('partials.footer')
   </div >
-
   <img src="{{ asset('img/tape.png') }}" class="footer-tape rotate-left" >
-
 </div >
 
-@include('partials.footer')
 
 <!-- JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9" ></script >

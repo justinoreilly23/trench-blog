@@ -2,46 +2,45 @@
 
 @section('content')
 
-  <form method="POST" action="/projects/{{ $project->id }}" style="margin-bottom:1em" >
+  <img src="{{ asset('img/bg-tape-logo.png') }}" alt="" class="bg-tape-logo" >
 
-    {{ method_field('PATCH') }}
-    {{ csrf_field() }}
+  <div class="form-with-bg" >
+    <form method="POST" action="/projects/{{ $project->id }}" style="margin-bottom:1em" id="update" >
+      {{ method_field('PATCH') }}
+      {{ csrf_field() }}
 
-    <div class="field" >
-      <label class="label" for="title" >Title</label >
-    </div >
-
-    <div class="control" >
-      <input type="text" class="input" name="title" placeholder="Title" value="{{ $project->title }}" >
-    </div >
-
-    <div class="field" >
-      <label class="label" for="description" >Description</label >
+      <div class="field" >
+        <label class="label" for="title" ></label >
+      </div >
 
       <div class="control" >
-        <textarea name="description" class="textarea" >{{ $project->description }}</textarea >
+        <input type="text"
+               class="input bg-translucent border-0"
+               name="title"
+               placeholder="Title"
+               value="{{ $project->title }}" >
       </div >
-    </div >
 
+      <div class="field" >
+        <label class="label" for="description" ></label >
+        <div class="control" >
+          <textarea name="description"
+                    class="textarea bg-translucent border-0"
+                    title="textarea" >{{ $project->description }}</textarea >
+        </div >
+      </div >
+    </form >
+
+    <form method="POST" action="/projects/{{ $project->id }}" id="delete" >
+      {{ method_field('DELETE') }}
+      {{ csrf_field() }}
+    </form >
 
     <div class="field" >
       <div class="control" >
-        <button type="submit" class="button is-link button button-yellow" >Update Project</button >
+        <button type="submit" class="btn bg-translucent text-black border-dark" form="update" >UPDATE</button >
+        <button type="submit" class="btn bg-translucent bg-black" form="delete" >DELETE</button >
       </div >
     </div >
-
-  </form >
-
-  <form method="POST" action="/projects/{{ $project->id }}">
-
-    {{ method_field('DELETE') }}
-    {{ csrf_field() }}
-
-    <div class="field" >
-      <div class="control" >
-        <button type="submit" class="button button-dark" >Delete Project</button >
-      </div >
-    </div >
-
-  </form >
+  </div >
 @endsection
