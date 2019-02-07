@@ -25,7 +25,7 @@
         <label class="label" for="description" ></label >
         <div class="control" >
           <textarea name="description"
-                    class="textarea bg-translucent border-0"
+                    class="textarea"
                     title="textarea" >{{ $project->description }}</textarea >
         </div >
       </div >
