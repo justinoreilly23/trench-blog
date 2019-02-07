@@ -15,7 +15,6 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous" >
 
-
   @include('partials.title')
 
 </head >
@@ -23,7 +22,7 @@
 
 @include('partials.header')
 
-<div class="content center" >
+<div class="content center" > n
   <div class="header-tape rotate-left" >
     <h1 >
       @include('partials.section_header')
