@@ -15,9 +15,10 @@
       </div >
 
       <div class="form-row" >
-        <textarea name="description" placeholder="Project description" class="mt-4 bg-transparent border-dark" ></textarea >
+        <textarea name="description"
+                  placeholder="Project description"
+                  class="mt-4 bg-transparent border-dark" ></textarea >
       </div >
-
       <button type="submit" class="btn btn-main" >Create</button >
     </form >
   </div >

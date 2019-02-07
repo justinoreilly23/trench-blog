@@ -1,4 +1,4 @@
-<div class="columns footer m-auto" >
+<div class="columns footer m-auto div-filled" >
   <div class="column list-inline-item footer-link" >
     <a href="https://www.twitch.tv/freepo1nt" target="_blank" ><i class="fab fa-twitch" ></i ></a >
   </div >
