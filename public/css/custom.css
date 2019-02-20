@@ -37,17 +37,10 @@ body
   width            : 100%;
 }
 
-a
+a, i
 {
   text-decoration : none;
-}
-
-a:hover
-{
-  transition-delay           : 0;
-  transition-duration        : .5s;
-  transition-property        : #FCE200;
-  transition-timing-function : ease;
+  transition      : color 500ms ease 0ms;
 }
 
 h1
@@ -214,7 +207,7 @@ i
 
 .footer i:hover
 {
-  color: #d8c620;
+  color : #D8C620;
 }
 
 .footer-link
@@ -226,6 +219,18 @@ i
 {
   background      : url(/img/button-submit.png) no-repeat;
   background-size : 100%;
+}
+
+.bg-flicker:hover
+{
+  background      : url("/img/bg-flicker1.gif") no-repeat;
+  background-size : 100%;
+  border-radius   : 0.3em;
+}
+
+.btn-flicker:hover
+{
+  background : url("/img/bg-flicker1.gif") no-repeat;
 }
 
 .btn-main
@@ -252,20 +257,14 @@ i
 
 .btn-dark
 {
-  background : url(/img/button-submit.png) no-repeat;
-  color      : #FCE200;
-  display    : inline-block;
-  height     : 60px;
-  margin     : 0;
-  padding    : 0;
-  text-align : center;
-  width      : 228px;
-}
-
-.btn-flicker
-{
-  background-color : #000;
-  color            : #FFF;
+  color            : #FCE200;
+  background-color : black;
+  display          : inline-block;
+  height           : 60px;
+  margin           : 0;
+  padding          : 0;
+  text-align       : center;
+  width            : 228px;
 }
 
 .btn-dark:hover
@@ -461,65 +460,33 @@ input[type="submit"]
 
 .project
 {
-  -webkit-transition : all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  background-color   : #434230;
-  border-radius      : 5px;
-  box-shadow         : 0 1px 2px rgba(0, 0, 0, 0.1);
-  display            : inline-block;
-  font-family        : vcr, sans-serif;
-  height             : 275px;
-  margin             : 0 15px;
-  overflow           : hidden;
-  padding-top        : 20px;
-  position           : relative;
-  transition         : all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  width              : 225px;
-}
-
-.project::after
-{
-  -webkit-transition : all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  border-radius      : 5px;
-  box-shadow         : 0 5px 15px rgba(0, 0, 0, 0.3);
-  content            : "";
-  height             : 100%;
-  left               : 0;
-  opacity            : 0;
-  position           : absolute;
-  top                : 0;
-  transition         : all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  width              : 100%;
-  z-index            : -1;
+  width            : 25%;
+  margin: 0 auto;
+  background: url(/img/flower_bg.jpg);
+  -webkit-transition : ease-in .3s;
+  -moz-transition    : ease-in .3s;
+  -ms-transition     : ease-in .3s;
+  -o-transition      : ease-in .3s;
+  transition         : ease-in .3s;
 }
 
 .project:hover
 {
-  -webkit-transform : scale(1.1, 1.1);
-  box-shadow        : none;
-  filter            : brightness(110%);
-  outline           : none;
-  transform         : scale(1.1, 1.1);
-  z-index           : 10;
+  filter: blur(2px);
+  color: transparent;
 }
 
-.project:hover::after
+.project-card-title
 {
-  opacity : 1;
-}
-
-.project > *
-{
-  font-weight : 400;
-}
-
-.card-title
-{
-  color       : #FFF;
+  /*color       : #FFF;*/
   line-height : 1em;
-  margin      : 0 0 20px;
+  padding     : 10px 10px;
+  margin      : 0 !important;
 }
 
 .card-desc
 {
-  margin : 0;
+  bottom      : 20px;
+  margin      : 0;
+  font-family : "Courier M W01 Light", sans-serif !important;
 }

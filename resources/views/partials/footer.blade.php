@@ -11,8 +11,7 @@
   </div >
   {{--<div class="column list-inline-item" ><a href="" ><i class="fab fa-discord" ></i ></a ></div >--}}
   <div class="column list-inline-item footer-link" >
-    <a href="https://twitter.com/justinoreilly02" target="_blank" ><i class="fab fa-twitter-square" ></i ></a >
+    <a href="https://twitter.com/justinoreilly02" target="_blank" ><i class="fab fa-twitter-square"></i ></a >
   </div >
   {{--<div class="column list-inline-item" ><a href="" ><i class="fab fa-instagram" ></i ></a ></div >--}}
-
 </div >

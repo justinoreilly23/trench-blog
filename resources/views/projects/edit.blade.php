@@ -37,9 +37,9 @@
     </form >
 
     <div class="field" >
-      <div class="control" >
-        <button type="submit" class="btn btn-main" form="update" >UPDATE</button >
-        <button type="submit" class="btn btn-flicker" form="delete" >DELETE</button >
+      <div class="control btn-group-lg" >
+        <button type="submit" class="btn btn-main btn-lg" form="update" >UPDATE</button >
+        <button type="submit" class="btn btn-flicker bg-black btn-lg" form="delete" >DELETE</button >
       </div >
     </div >
   </div >
